@@ -1,17 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
-    <link rel="stylesheet" />
-    <title>MotionAI - Miglietta Durante</title>
-  </head>
-  <body>
-    <header class="text-center bg-teal-100 p-10 m-3 rounded-lg shadow-md">
-      <h1 class="text-3xl font-bold drop-shadow-md">MotionAI</h1>
-      <h1 class="text-2xl font-bold drop-shadow-md">Miglietta Durante</h1>
-    </header>
-    <main class="container mx-auto"></main>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./output.css" rel="stylesheet" />
+  <link rel="stylesheet" />
+  <title>MotionAI - Miglietta Durante</title>
+</head>
+
+<body>
+  <header class="text-center h-56 rounded-lg shadow-md bg-[url('./assets/header.jpg')] bg-cover bg-center mb-10">
+    <h1 class="text-3xl font-bold drop-shadow-md content-center bg-black/50 h-full text-white">MotionAI</h1>
+  </header>
+  <main class="flex flex-col justify-center items-center w-full p-2">
+    <div class="flex flex-col md:flex-row items-center bg-slate-100 rounded-xl shadow-lg">
+      <div class="p-2 m-5 md:w-2/3">
+        <h2 class="text-2xl mb-6 font-bold">
+          Presentazione del progetto
+        </h2>
+
+        <section class=" flex flex-col text-justify gap-6">
+          <p>
+            <strong>MotionAI</strong> è un progetto che si pone l'obiettivo di creare un sistema di riconoscimento di
+            attività umane
+            tramite l'utilizzo di una <strong>SensorTile.Box PRO</strong>, un dispositivo sviluppato da <strong>ST
+              Microelectronics</strong>.
+          </p>
+
+          <p>
+            La SensorTile.Box PRO è un dispositivo indossabile che integra diversi sensori, tra cui accelerometro,
+            giroscopio, magnetometro. Questi sensori permettono di raccogliere dati relativi all'attività
+            umana e all'ambiente circostante.
+          </p>
+
+          <p>
+            Il progetto sfrutta le potenzialità di questo dispositivo per riconoscere attività umane come camminare,
+            correre o guidare. Il sistema è stato sviluppato utilizzando un approccio di machine learning, in
+            particolare
+            rispettando i principi dell'Edge Computing, ovvero il processamento dei dati direttamente sul dispositivo.
+            Questo permette di ridurre i tempi di risposta e di aumentare la privacy dell'utente.
+          </p>
+        </section>
+      </div>
+      <div class="w-1/2 p-5 flex flex-col items-center justify-center gap-10">
+        <img src="./assets/sensortile.png" alt="SensorTile.Box PRO" />
+        <img src="./assets/st_logo.png" alt="ST Logo" class="w-28" />
+      </div>
+    </div>
+
+
+    <div class="flex container flex-wrap md:flex-row flex-col items-center justify-center gap-5 p-2 mt-5 w-full h-full">
+      <div class="flex flex-col max-md:w-80 max-md:h-64">
+        <h2 class="text-center font-bold text-2xl p-4">
+          Sviluppo
+        </h2>
+        <div class="max-md:relative max-md:w-full max-md:h-full md:w-[640px] md:h-[360px] rounded-xl shadow-xl">
+          <iframe class="max-md:absolute w-full h-full md:w-[640px] md:h-[360] rounded-xl" allowfullscreen="true"
+            src="https://drive.google.com/file/d/1hjI6HiQV5vNwpYV_v1ChKP7aaIlh9_Sb/preview"
+            title="MotionAI video player"></iframe>
+        </div>
+      </div>
+      <div class="flex flex-col max-md:w-80 max-md:h-64">
+        <h2 class="text-center font-bold text-2xl p-4">
+          Test
+        </h2>
+        <div class="max-md:relative max-md:w-full max-md:h-full md:w-[640px] md:h-[360px] rounded-xl shadow-xl">
+          <iframe class="max-md:absolute w-full h-full md:w-[640px] md:h-[360] rounded-xl" allowfullscreen="true"
+            src="https://drive.google.com/file/d/1TX73CVsz-JUHEHO1jpowNm0oJmxzBriV/preview"
+            title="MotionAI video player"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center my-5 w-full bg-slate-100 p-10 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-bold">
+        Membri del Team
+      </h2>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-5 p-2 mt-5 w-full h-full text-sm">
+        <div class="flex flex-col items-center justify-center gap-2 p-2">
+          <img src="./assets/samuel.png" alt="Miglietta Samuel" class="rounded-full w-28 h-28" />
+          <h3 class="text-xl font-bold">Miglietta Samuel</h3>
+          <span>
+            Matricola: 20096511
+          </span>
+          <span class="flex flex-row gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+              <path
+                d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+            </svg>
+
+            <a class="underline"
+              href="mailto:samuel.miglietta@studenti.unisalento.it">samuel.miglietta@studenti.unisalento.it</a>
+          </span>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2 p-2">
+          <img src="./assets/mattia.jpg" alt="Durante Mattia" class="rounded-full w-28 h-28" />
+          <h3 class="text-xl font-bold">Durante Mattia</h3>
+          <span>
+            Matricola: 20096510
+          </span>
+          <span class="flex flex-row gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+              <path
+                d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+            </svg>
+            <a class="underline"
+              href="mailto:mattia.durante1@studenti.unisalento.it">mattia.durante1@studenti.unisalento.it</a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</body>
+
 </html>
