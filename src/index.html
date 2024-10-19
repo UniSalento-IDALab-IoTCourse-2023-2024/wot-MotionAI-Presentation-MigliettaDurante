@@ -10,17 +10,18 @@
 </head>
 
 <body>
-  <header class="text-center h-56 rounded-lg shadow-md bg-[url('./assets/header.jpg')] bg-cover bg-center mb-10">
+  <header class="text-center h-56 rounded-lg shadow-md bg-[url('./assets/header.jpg')] bg-cover bg-center mb-5">
     <h1 class="text-3xl font-bold drop-shadow-md content-center bg-black/50 h-full text-white">MotionAI</h1>
   </header>
+
   <main class="flex flex-col justify-center items-center w-full p-2">
-    <div class="flex flex-col md:flex-row items-center bg-slate-100 rounded-xl shadow-lg">
+    <div class="flex flex-col md:flex-row my-5 items-center bg-slate-100 rounded-xl shadow-lg">
       <div class="p-2 m-5 md:w-2/3">
         <h2 class="text-2xl mb-6 font-bold">
           Presentazione del progetto
         </h2>
 
-        <section class=" flex flex-col text-justify gap-6">
+        <section class="flex flex-col text-justify gap-6">
           <p>
             <strong>MotionAI</strong> è un progetto che si pone l'obiettivo di creare un sistema di riconoscimento di
             attività umane
@@ -49,8 +50,36 @@
       </div>
     </div>
 
+    <div class="flex flex-col md:flex-row w-full items-center my-5 bg-slate-100 rounded-xl shadow-lg">
+      <div class="p-2 m-5 md:w-2/3">
+        <h2 class="text-2xl mb-6 font-bold">
+          Funzionalità
+        </h2>
 
-    <div class="flex container flex-wrap md:flex-row flex-col items-center justify-center gap-5 p-2 mt-5 w-full h-full">
+        <ul class="flex flex-col text-justify gap-6 list-disc list-inside pl-5">
+          <li>
+            <strong>Raccolta dati sensori</strong>
+            Il sistema è in grado di raccogliere dati dai sensori presenti sulla SensorTile.Box PRO, tra cui
+            accelerometro, giroscopio e magnetometro. Questi dati vengono utilizzati per riconoscere le attività umane.
+          </li>
+          <li>
+            <strong>Visualizzazione dati</strong> 
+            Il sistema permette di visualizzare i dati raccolti dai sensori in tempo reale, in modo da monitorare 
+            il corretto funzionamento del dispositivo.
+          </li>
+          <li>
+            <strong>Riconoscimento attività</strong>
+            Il sistema è in grado di riconoscere diverse attività umane, come camminare, correre o guidare.
+          </li>
+
+        </ul>
+      </div>
+      <div class="w-1/2 p-5 flex flex-col items-center justify-center gap-10">
+        <img class="w-56" src="./assets/Funzioni_disponibili.jpeg" alt="Funzioni disponibili" />
+      </div>
+    </div>
+
+    <div class="flex flex-wrap md:flex-row flex-col items-center justify-center gap-5 p-2 mt-5 w-full h-full">
       <div class="flex flex-col max-md:w-80 max-md:h-64">
         <h2 class="text-center font-bold text-2xl p-4">
           Sviluppo
@@ -68,17 +97,17 @@
         <div class="max-md:relative max-md:w-full max-md:h-full md:w-[640px] md:h-[360px] rounded-xl shadow-xl">
           <iframe class="max-md:absolute w-full h-full md:w-[640px] md:h-[360] rounded-xl" allowfullscreen="true"
             src="https://drive.google.com/file/d/1TX73CVsz-JUHEHO1jpowNm0oJmxzBriV/preview"
-            title="MotionAI video player"></iframe>
+            title="MotionAI Demo video player"></iframe>
         </div>
       </div>
     </div>
 
-    <div class="flex flex-col items-center my-5 w-full bg-slate-100 p-10 rounded-xl shadow-lg">
+    <div class="flex flex-col items-center my-5 w-full p-10">
       <h2 class="text-2xl font-bold">
         Membri del Team
       </h2>
       <div class="flex flex-col md:flex-row items-center justify-center gap-5 p-2 mt-5 w-full h-full text-sm">
-        <div class="flex flex-col items-center justify-center gap-2 p-2">
+        <div class="flex flex-col items-center justify-center gap-2 p-4 bg-gradient-to-b from-sky-200 to-white rounded-xl shadow-xl">
           <img src="./assets/samuel.png" alt="Miglietta Samuel" class="rounded-full w-28 h-28" />
           <h3 class="text-xl font-bold">Miglietta Samuel</h3>
           <span>
@@ -94,8 +123,12 @@
             <a class="underline"
               href="mailto:samuel.miglietta@studenti.unisalento.it">samuel.miglietta@studenti.unisalento.it</a>
           </span>
+          <span class="flex flex-row gap-2">
+            <img src="./assets/github_logo/github-mark.png" alt="Github Logo" class="rounded-full w-6 h-6" />
+            <a class="underline" href="https://github.com/Sam100801">Sam100810</a>
+          </span>
         </div>
-        <div class="flex flex-col items-center justify-center gap-2 p-2">
+        <div class="flex flex-col items-center justify-center gap-2 p-4 bg-gradient-to-b from-sky-200 to-white rounded-xl shadow-xl">
           <img src="./assets/mattia.jpg" alt="Durante Mattia" class="rounded-full w-28 h-28" />
           <h3 class="text-xl font-bold">Durante Mattia</h3>
           <span>
@@ -109,6 +142,10 @@
             </svg>
             <a class="underline"
               href="mailto:mattia.durante1@studenti.unisalento.it">mattia.durante1@studenti.unisalento.it</a>
+          </span>
+          <span class="flex flex-row gap-2">
+            <img src="./assets/github_logo/github-mark.png" alt="Github Logo" class="rounded-full w-6 h-6" />
+            <a class="underline" href="https://github.com/mdurante0">mdurante0</a>
           </span>
         </div>
       </div>
