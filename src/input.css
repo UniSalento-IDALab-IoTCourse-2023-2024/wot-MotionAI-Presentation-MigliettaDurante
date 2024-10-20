@@ -9,6 +9,15 @@ html {
 }
 
 body {
-  background-color: #eaf3fc;
+  background-color: skyblue;
   font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: underline;
+  color: blue;
+}
+
+a:hover {
+  color: rgb(0, 0, 188);
 }

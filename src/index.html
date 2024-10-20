@@ -6,16 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="./output.css" rel="stylesheet" />
   <link rel="stylesheet" />
+  <script src="./carousel.js" defer></script>
+
   <title>MotionAI - Miglietta Durante</title>
 </head>
 
 <body>
-  <header class="text-center h-56 rounded-lg shadow-md bg-[url('./assets/header.jpg')] bg-cover bg-center mb-5">
-    <h1 class="text-3xl font-bold drop-shadow-md content-center bg-black/50 h-full text-white">MotionAI</h1>
+  <div class="h-56"></div>
+  <header class="absolute top-0 w-full text-center md:h-[16.5rem] h-56 shadow-xl bg-[url('./assets/header.jpg')] bg-cover bg-center">
+    <h1 class="text-3xl font-bold drop-shadow-2xl content-center bg-black/40 h-56 text-white">MOTION<span class="text-sky-300">AI</span></h1>
   </header>
 
+  <nav class="z-10 sticky top-0 bg-black/40 max-md:hidden">
+    <ul class="flex gap-5 p-2 font-bold justify-around">
+      <li>
+        <a href="#presentazione" class="text-white no-underline hover:text-slate-200">Presentazione</a>
+      </li>
+      <li>
+        <a href="#funzionalita" class="text-white no-underline hover:text-slate-200">Funzionalità</a>
+      </li>
+      <li>
+        <a href="#architettura" class="text-white no-underline hover:text-slate-200">Architettura</a>
+      </li>
+      <li>
+        <a href="#casi-duso" class="text-white no-underline hover:text-slate-200
+          ">Casi d'uso</a>
+      </li>
+      <li>
+        <a href="#video" class="text-white no-underline hover:text-slate-200
+          ">Sviluppo e Test</a>
+      </li>
+      <li>
+        <a href="#team" class="text-white no-underline hover:text-slate-200
+          ">Team</a>
+      </li>
+    </ul>
+  </nav>
+
   <main class="flex flex-col justify-center items-center w-full p-2">
-    <div class="flex flex-col md:flex-row my-5 items-center bg-slate-100 rounded-xl shadow-lg">
+
+    <div id="presentazione" class="flex flex-col md:flex-row my-5 items-center bg-slate-100 rounded-xl shadow-lg">
       <div class="p-2 m-5 md:w-2/3">
         <h2 class="text-2xl mb-6 font-bold">
           Presentazione del progetto
@@ -42,6 +72,12 @@
             rispettando i principi dell'Edge Computing, ovvero il processamento dei dati direttamente sul dispositivo.
             Questo permette di ridurre i tempi di risposta e di aumentare la privacy dell'utente.
           </p>
+
+          <p>
+            Repository GitHub: <a
+              href="https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-project-HAR-MigliettaDurante">
+              MotionAI Android app</a>
+          </p>
         </section>
       </div>
       <div class="w-1/2 p-5 flex flex-col items-center justify-center gap-10">
@@ -50,38 +86,187 @@
       </div>
     </div>
 
-    <div class="flex flex-col md:flex-row w-full items-center my-5 bg-slate-100 rounded-xl shadow-lg">
-      <div class="p-2 m-5 md:w-2/3">
+    <div id="funzionalita" class="flex flex-col md:flex-row w-full items-center my-5 bg-slate-100 rounded-xl shadow-lg">
+      <div class="p-2 m-5 md:w-2/3 text-justify">
         <h2 class="text-2xl mb-6 font-bold">
           Funzionalità
         </h2>
 
-        <ul class="flex flex-col text-justify gap-6 list-disc list-inside pl-5">
+        <ul class="flex flex-col md:w-3/4 text-justify gap-6 list-disc list-inside">
           <li>
-            <strong>Raccolta dati sensori</strong>
+            <strong>Raccolta dati sensori:</strong>
             Il sistema è in grado di raccogliere dati dai sensori presenti sulla SensorTile.Box PRO, tra cui
             accelerometro, giroscopio e magnetometro. Questi dati vengono utilizzati per riconoscere le attività umane.
           </li>
           <li>
-            <strong>Visualizzazione dati</strong> 
-            Il sistema permette di visualizzare i dati raccolti dai sensori in tempo reale, in modo da monitorare 
+            <strong>Visualizzazione dati:</strong>
+            Il sistema permette di visualizzare i dati raccolti dai sensori in tempo reale, in modo da monitorare
             il corretto funzionamento del dispositivo.
           </li>
           <li>
-            <strong>Riconoscimento attività</strong>
+            <strong>Riconoscimento attività:</strong>
             Il sistema è in grado di riconoscere diverse attività umane, come camminare, correre o guidare.
           </li>
 
         </ul>
       </div>
-      <div class="w-1/2 p-5 flex flex-col items-center justify-center gap-10">
-        <img class="w-56" src="./assets/Funzioni_disponibili.jpeg" alt="Funzioni disponibili" />
+      <div class="carousel relative w-64 p-5 flex items-center justify-center overflow-hidden">
+        <div class="carousel-inner w-64 flex transition-transform duration-500 ease-in-out">
+          <div class="carousel-item w-full px-2 flex-shrink-0">
+            <img src="./assets/Funzioni_disponibili.jpeg" alt="Funzioni disponibili"
+              class="w-full rounded-xl shadow-lg">
+          </div>
+          <div class="carousel-item w-full px-2 flex-shrink-0">
+            <img src="./assets/Valori_accelerometro.jpeg" alt="Accelerometro" class="w-full rounded-xl shadow-lg">
+          </div>
+          <div class="carousel-item w-full px-2 flex-shrink-0">
+            <img src="./assets/Schermata_HAR_stop.jpeg" alt="Activity Recognition" class="w-full rounded-xl shadow-lg">
+          </div>
+        </div>
+        <button
+          class="prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800/50 text-white p-2 rounded-l-xl">&larr;</button>
+        <button
+          class="next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800/50 text-white p-2 rounded-r-xl">&rarr;</button>
       </div>
     </div>
 
-    <div class="flex flex-wrap md:flex-row flex-col items-center justify-center gap-5 p-2 mt-5 w-full h-full">
+    <div id="architettura" class="flex flex-col my-5 p-5 items-center bg-slate-100 rounded-xl shadow-lg">
+      <h2 class="text-left text-2xl w-full font-bold">
+        Architettura del sistema
+      </h2>
+      <section class="flex flex-col items-center w-full text-justify">
+        <p class="w-full text-left my-5">
+          L'architettura del sistema è raffigurata nel diagramma seguente:
+        </p>
+        <img src="./assets/Architettura_sistema.png" alt="Architettura del sistema"
+          class="md:w-2/3 w-full rounded-xl shadow-lg" />
+        <h3 class="text-left text-xl w-full font-bold py-2">
+          Acquisition
+        </h3>
+        <p class="w-full text-left mb-4">
+          Il modulo di acquisizione è responsabile della raccolta dei dati dai sensori presenti sulla SensorTile.Box
+          PRO.
+          Questi dati vengono inviati al modulo di processing per l'elaborazione.
+        </p>
+        <h3 class="text-left text-xl w-full font-bold py-2">
+          Processing
+        </h3>
+        <p class="w-full text-left mb-2">
+          Il modulo di processing è responsabile dell'elaborazione dei dati ricevuti dal modulo di acquisizione. In
+          particolare, il modulo di processing utilizza un modello di machine learning per riconoscere le attività umane
+          a partire dai dati raccolti.
+        </p>
+
+        <p class="w-full text-left mb-2">
+          Acquisizione dati e riconoscimento delle attività avvengono direttamente sulla SensorTile.Box PRO, rispettando
+          i principi dell'Edge Computing. È possibile visionare il codice sorgente del firmware <strong>BLEMLC</strong>
+          al seguente link:
+        </p>
+
+        <p class="w-full text-left mb-4">
+          Repository GitHub: <a
+            href="https://github.com/STMicroelectronics/fp-sns-stbox1/tree/main/Projects/STEVAL-MKBOXPRO/Applications/BLEMLC">BLEMLC</a>
+        </p>
+        <h3 class="text-left text-xl w-full font-bold py-2">
+          Communication
+        </h3>
+        <p class="w-full text-left mb-2">
+          Il modulo di communication è responsabile della comunicazione tra il modulo di processing e l'interfaccia
+          utente. In particolare, il modulo di communication invia i risultati del riconoscimento delle attività al
+          modulo di visualizzazione. La comunicazione avviene tramite protocollo <strong>BLE (Bluetooth Low
+            Energy)</strong>, in particolare
+          utilizzando l'SDK fornito da ST Microelectronics, <strong>Blue ST SDK</strong>.
+        </p>
+
+        <p class="w-full text-left mb-4">
+          Repository GitHub: <a href="https://github.com/STMicroelectronics/BlueSTSDK_Android">
+            BlueSTSDK_Android</a>
+        </p>
+
+        <h3 class="text-left text-xl w-full font-bold py-2">
+          Visualization
+        </h3>
+        <p class="w-full text-left mb-2">
+          Il modulo di visualization è responsabile della visualizzazione dei dati raccolti dai sensori e dei risultati
+          del riconoscimento delle attività. Il modulo di visualization permette all'utente di
+          monitorare il corretto funzionamento del sistema. In particolare, il modulo di visualization è stato
+          sviluppato
+          come un'applicazione Android, utilizzando il linguaggio <strong>Kotlin</strong>.
+        </p>
+
+        <p class="w-full text-left mb-4">
+          Repository GitHub: <a
+            href="https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-project-HAR-MigliettaDurante">
+            MotionAI Android app</a>
+        </p>
+      </section>
+    </div>
+
+    <div id="casi-duso" class="flex flex-col my-5 p-5 items-center bg-slate-100 rounded-xl shadow-lg">
+      <h2 class="text-left text-2xl w-full font-bold">
+        Casi d'uso
+      </h2>
+      <section class="flex flex-col items-center w-full text-justify">
+        <p class="w-full text-left my-5">
+          Il diagramma dei casi d'uso è raffigurata nel diagramma seguente:
+        </p>
+        <img src="./assets/diagramma dei casi d'uso.png" alt="Diagramma dei casi d'uso"
+          class="w-56 rounded-xl shadow-lg" />
+      </section>
+
+      <div class="flex flex-col md:flex-row w-full mt-10">
+        <section class="flex flex-col items-center md:w-3/5 text-justify md:mr-20">
+          <h3 class="text-left text-xl w-full font-bold py-2">
+            Collegamento Bluetooth
+          </h3>
+          <p class="w-full text-left mb-4">
+            L'utente deve essere in grado di collegare la SensorTile.Box PRO al proprio smartphone tramite connessione
+            Bluetooth.
+          </p>
+          <h3 class="text-left text-xl w-full font-bold py-2">
+            Visualizzazione dati
+          </h3>
+          <p class="w-full text-left mb-2">
+            L'utente deve essere in grado di visualizzare i dati raccolti da accelerometro, giroscopio e magnetometro
+            presenti sulla SensorTile.Box PRO.
+          </p>
+
+          <h3 class="text-left text-xl w-full font-bold py-2">
+            Visualizzazione attività
+          </h3>
+          <p class="w-full text-left mb-2">
+            L'utente deve essere in grado di visualizzare le attività riconosciute dal sistema: camminare, correre o
+            guidare.
+          </p>
+        </section>
+
+        <div class="carousel relative md:w-[30rem] p-5 flex items-center justify-center overflow-hidden">
+          <div class="carousel-inner md:w-[30rem] flex transition-transform duration-500 ease-in-out">
+            <div class="carousel-item w-full px-2 flex-shrink-0">
+              <img src="./assets/Diagramma_sequenza_collegamentoBluetooth.png" alt="Collegamento Bluetooth"
+                class="w-full rounded-xl shadow-lg">
+            </div>
+            <div class="carousel-item w-full px-2 flex-shrink-0">
+              <img src="./assets/Diagramma_sequenza_dati.png" alt="Visualizzazione dati"
+                class="w-full rounded-xl shadow-lg">
+            </div>
+            <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+              <img src="./assets/Diagramma_sequenza_previsione.png" alt="Visualizzazione Activity Recognition"
+                class="w-full rounded-xl shadow-lg">
+            </div>
+          </div>
+          <button
+            class="prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800/50 text-white p-2 rounded-l-xl">&larr;</button>
+          <button
+            class="next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800/50 text-white p-2 rounded-r-xl">&rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="video"
+      class="flex flex-wrap md:flex-row flex-col items-center justify-center gap-5 p-2 mt-5 w-full h-full">
       <div class="flex flex-col max-md:w-80 max-md:h-64">
-        <h2 class="text-center font-bold text-2xl p-4">
+        <h2 class="text-center font-bold text-2xl p-4 drop-shadow-lg">
           Sviluppo
         </h2>
         <div class="max-md:relative max-md:w-full max-md:h-full md:w-[640px] md:h-[360px] rounded-xl shadow-xl">
@@ -91,7 +276,7 @@
         </div>
       </div>
       <div class="flex flex-col max-md:w-80 max-md:h-64">
-        <h2 class="text-center font-bold text-2xl p-4">
+        <h2 class="text-center font-bold text-2xl p-4 drop-shadow-lg">
           Test
         </h2>
         <div class="max-md:relative max-md:w-full max-md:h-full md:w-[640px] md:h-[360px] rounded-xl shadow-xl">
@@ -102,12 +287,13 @@
       </div>
     </div>
 
-    <div class="flex flex-col items-center my-5 w-full p-10">
+    <div id="team" class="flex flex-col items-center my-5 w-full p-10">
       <h2 class="text-2xl font-bold">
         Membri del Team
       </h2>
       <div class="flex flex-col md:flex-row items-center justify-center gap-5 p-2 mt-5 w-full h-full text-sm">
-        <div class="flex flex-col items-center justify-center gap-2 p-4 bg-gradient-to-b from-sky-200 to-white rounded-xl shadow-xl">
+        <div
+          class="flex flex-col items-center justify-center gap-2 p-4 bg-gradient-to-b from-sky-200 to-white rounded-xl shadow-xl">
           <img src="./assets/samuel.png" alt="Miglietta Samuel" class="rounded-full w-28 h-28" />
           <h3 class="text-xl font-bold">Miglietta Samuel</h3>
           <span>
@@ -120,15 +306,15 @@
                 d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
             </svg>
 
-            <a class="underline"
-              href="mailto:samuel.miglietta@studenti.unisalento.it">samuel.miglietta@studenti.unisalento.it</a>
+            <a href="mailto:samuel.miglietta@studenti.unisalento.it">samuel.miglietta@studenti.unisalento.it</a>
           </span>
           <span class="flex flex-row gap-2">
             <img src="./assets/github_logo/github-mark.png" alt="Github Logo" class="rounded-full w-6 h-6" />
-            <a class="underline" href="https://github.com/Sam100801">Sam100810</a>
+            <a href="https://github.com/Sam100801">Sam100810</a>
           </span>
         </div>
-        <div class="flex flex-col items-center justify-center gap-2 p-4 bg-gradient-to-b from-sky-200 to-white rounded-xl shadow-xl">
+        <div
+          class="flex flex-col items-center justify-center gap-2 p-4 bg-gradient-to-b from-sky-200 to-white rounded-xl shadow-xl">
           <img src="./assets/mattia.jpg" alt="Durante Mattia" class="rounded-full w-28 h-28" />
           <h3 class="text-xl font-bold">Durante Mattia</h3>
           <span>
@@ -140,12 +326,11 @@
               <path
                 d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
             </svg>
-            <a class="underline"
-              href="mailto:mattia.durante1@studenti.unisalento.it">mattia.durante1@studenti.unisalento.it</a>
+            <a href="mailto:mattia.durante1@studenti.unisalento.it">mattia.durante1@studenti.unisalento.it</a>
           </span>
           <span class="flex flex-row gap-2">
             <img src="./assets/github_logo/github-mark.png" alt="Github Logo" class="rounded-full w-6 h-6" />
-            <a class="underline" href="https://github.com/mdurante0">mdurante0</a>
+            <a href="https://github.com/mdurante0">mdurante0</a>
           </span>
         </div>
       </div>
