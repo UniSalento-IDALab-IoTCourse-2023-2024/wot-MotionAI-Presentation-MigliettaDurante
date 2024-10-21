@@ -13,8 +13,10 @@
 
 <body>
   <div class="h-56"></div>
-  <header class="absolute top-0 w-full text-center md:h-[16.5rem] h-56 shadow-xl bg-[url('./assets/header.jpg')] bg-cover bg-center">
-    <h1 class="text-3xl font-bold drop-shadow-2xl content-center bg-black/40 h-56 text-white">MOTION<span class="text-sky-300">AI</span></h1>
+  <header id="home"
+    class="absolute top-0 w-full text-center md:h-[16.5rem] h-56 shadow-xl bg-[url('./assets/header.jpg')] bg-cover bg-center">
+    <h1 class="text-3xl font-bold drop-shadow-2xl content-center bg-black/40 h-56 text-white">MOTION<span
+        class="text-sky-300">AI</span></h1>
   </header>
 
   <nav class="z-10 sticky top-0 bg-black/40 max-md:hidden">
@@ -33,8 +35,8 @@
           ">Casi d'uso</a>
       </li>
       <li>
-        <a href="#video" class="text-white no-underline hover:text-slate-200
-          ">Sviluppo e Test</a>
+        <a href="#demo" class="text-white no-underline hover:text-slate-200
+          ">Demo</a>
       </li>
       <li>
         <a href="#team" class="text-white no-underline hover:text-slate-200
@@ -43,7 +45,17 @@
     </ul>
   </nav>
 
-  <main class="flex flex-col justify-center items-center w-full p-2">
+  <main class="flex flex-col justify-center items-center w-full md:p-10 p-2">
+
+    <a href="#home"
+      class="fixed z-10 no-underline hover:text-white bottom-10 right-10 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-full">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+        <path
+          d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+        <path
+          d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+      </svg>
+    </a>
 
     <div id="presentazione" class="flex flex-col md:flex-row my-5 items-center bg-slate-100 rounded-xl shadow-lg">
       <div class="p-2 m-5 md:w-2/3">
@@ -124,9 +136,9 @@
           </div>
         </div>
         <button
-          class="prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800/50 text-white p-2 rounded-l-xl">&larr;</button>
+          class="prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-l-3xl rounded-r-md">&larr;</button>
         <button
-          class="next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800/50 text-white p-2 rounded-r-xl">&rarr;</button>
+          class="next absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-r-3xl rounded-l-md">&rarr;</button>
       </div>
     </div>
 
@@ -202,16 +214,16 @@
       </section>
     </div>
 
-    <div id="casi-duso" class="flex flex-col my-5 p-5 items-center bg-slate-100 rounded-xl shadow-lg">
+    <div id="casi-duso" class="flex flex-col w-full my-5 p-5 items-center bg-slate-100 rounded-xl shadow-lg">
       <h2 class="text-left text-2xl w-full font-bold">
         Casi d'uso
       </h2>
       <section class="flex flex-col items-center w-full text-justify">
         <p class="w-full text-left my-5">
-          Il diagramma dei casi d'uso è raffigurata nel diagramma seguente:
+          Il diagramma dei casi d'uso è raffigurato nella figura seguente:
         </p>
         <img src="./assets/diagramma dei casi d'uso.png" alt="Diagramma dei casi d'uso"
-          class="w-56 rounded-xl shadow-lg" />
+          class="w-72 rounded-xl shadow-lg" />
       </section>
 
       <div class="flex flex-col md:flex-row w-full mt-10">
@@ -240,8 +252,8 @@
           </p>
         </section>
 
-        <div class="carousel relative md:w-[30rem] p-5 flex items-center justify-center overflow-hidden">
-          <div class="carousel-inner md:w-[30rem] flex transition-transform duration-500 ease-in-out">
+        <div class="carousel relative md:w-[40rem] p-5 flex items-center justify-center overflow-hidden">
+          <div class="carousel-inner md:w-[40rem] flex transition-transform duration-500 ease-in-out">
             <div class="carousel-item w-full px-2 flex-shrink-0">
               <img src="./assets/Diagramma_sequenza_collegamentoBluetooth.png" alt="Collegamento Bluetooth"
                 class="w-full rounded-xl shadow-lg">
@@ -256,33 +268,39 @@
             </div>
           </div>
           <button
-            class="prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800/50 text-white p-2 rounded-l-xl">&larr;</button>
+            class="prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-l-3xl rounded-r-md">&larr;</button>
           <button
-            class="next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800/50 text-white p-2 rounded-r-xl">&rarr;</button>
+            class="next absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-r-3xl rounded-l-md">&rarr;</button>
         </div>
       </div>
     </div>
 
-    <div id="video"
-      class="flex flex-wrap md:flex-row flex-col items-center justify-center gap-5 p-2 mt-5 w-full h-full">
-      <div class="flex flex-col max-md:w-80 max-md:h-64">
-        <h2 class="text-center font-bold text-2xl p-4 drop-shadow-lg">
-          Sviluppo
+    <div id="demo" class="flex flex-col md:flex-row w-full my-5 items-center justify-center bg-slate-100 rounded-xl shadow-lg">
+      <div class="p-2 m-5">
+        <h2 class="text-2xl text-center mb-6 font-bold">
+          Demo
         </h2>
-        <div class="max-md:relative max-md:w-full max-md:h-full md:w-[640px] md:h-[360px] rounded-xl shadow-xl">
-          <iframe class="max-md:absolute w-full h-full md:w-[640px] md:h-[360] rounded-xl" allowfullscreen="true"
-            src="https://drive.google.com/file/d/1hjI6HiQV5vNwpYV_v1ChKP7aaIlh9_Sb/preview"
-            title="MotionAI video player"></iframe>
-        </div>
-      </div>
-      <div class="flex flex-col max-md:w-80 max-md:h-64">
-        <h2 class="text-center font-bold text-2xl p-4 drop-shadow-lg">
-          Test
-        </h2>
-        <div class="max-md:relative max-md:w-full max-md:h-full md:w-[640px] md:h-[360px] rounded-xl shadow-xl">
-          <iframe class="max-md:absolute w-full h-full md:w-[640px] md:h-[360] rounded-xl" allowfullscreen="true"
-            src="https://drive.google.com/file/d/1TX73CVsz-JUHEHO1jpowNm0oJmxzBriV/preview"
-            title="MotionAI Demo video player"></iframe>
+        <div class="flex flex-wrap md:flex-row flex-col items-center justify-center gap-5 p-2 mt-5 w-full h-full">
+          <div class="flex flex-col max-md:w-80 max-md:h-64">
+            <h2 class="text-center font-bold text-2xl p-4 drop-shadow-lg">
+              Sviluppo
+            </h2>
+            <div class="max-md:relative max-md:w-full max-md:h-full md:w-[640px] md:h-[360px] rounded-xl shadow-xl">
+              <iframe class="max-md:absolute w-full h-full md:w-[640px] md:h-[360] rounded-xl" allowfullscreen="true"
+                src="https://drive.google.com/file/d/1hjI6HiQV5vNwpYV_v1ChKP7aaIlh9_Sb/preview"
+                title="MotionAI video player"></iframe>
+            </div>
+          </div>
+          <div class="flex flex-col max-md:w-80 max-md:h-64">
+            <h2 class="text-center font-bold text-2xl p-4 drop-shadow-lg">
+              Test
+            </h2>
+            <div class="max-md:relative max-md:w-full max-md:h-full md:w-[640px] md:h-[360px] rounded-xl shadow-xl">
+              <iframe class="max-md:absolute w-full h-full md:w-[640px] md:h-[360] rounded-xl" allowfullscreen="true"
+                src="https://drive.google.com/file/d/1TX73CVsz-JUHEHO1jpowNm0oJmxzBriV/preview"
+                title="MotionAI Demo video player"></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
