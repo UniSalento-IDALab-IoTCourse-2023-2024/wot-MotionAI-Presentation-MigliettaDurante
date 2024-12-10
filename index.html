@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="./src/output.css" rel="stylesheet" />
   <link rel="stylesheet" />
   <script src="./src/carousel.js" defer></script>
@@ -14,32 +17,59 @@
 <body>
   <div class="h-56"></div>
   <header id="home"
-    class="absolute top-0 w-full text-center md:h-[16.5rem] h-56 shadow-xl bg-[url('./assets/header.jpg')] bg-cover bg-center">
-    <h1 class="text-3xl font-bold drop-shadow-2xl content-center bg-black/40 h-56 text-white">MOTION<span
+    class="z-10 absolute top-0 w-full text-center lg:h-[16.5rem] h-56 shadow-xl bg-[url('./assets/header.jpg')] bg-cover bg-center">
+    <h1 class="text-3xl font-bold drop-shadow-2xl content-center bg-black/50 h-56 text-white">MOTION<span
         class="text-sky-300">AI</span></h1>
   </header>
 
-  <nav class="z-10 sticky top-0 bg-black/40 max-md:hidden">
-    <ul class="flex gap-5 p-2 font-bold justify-around">
-      <li>
-        <a href="#presentazione" class="text-white no-underline hover:text-slate-200">Presentazione</a>
+  <nav class="z-20 flex flex-row justify-between sticky top-0 bg-black/50 max-lg:hidden">
+    <a href="#home" class="text-xl content-center mx-12 font-bold text-white group hover:text-slate-200 no-underline">Motion<span
+        class="text-sky-300 group-hover:text-sky-400">AI</span>
+    </a>
+    <ul class="flex gap-5 px-5 font-semibold justify-around">
+      <li class="p-2">
+        <a href="#presentazione" class="text-white no-underline hover:text-slate-300">Presentazione</a>
       </li>
-      <li>
-        <a href="#funzionalita" class="text-white no-underline hover:text-slate-200">Funzionalità</a>
+      <li class="p-2">
+        <a href="#funzionalita" class="text-white no-underline hover:text-slate-300">Funzionalità</a>
       </li>
-      <li>
-        <a href="#architettura" class="text-white no-underline hover:text-slate-200">Architettura</a>
+      <li class="p-2">
+        <a href="#architettura" class="text-white no-underline hover:text-slate-300">Architettura</a>
       </li>
-      <li>
-        <a href="#casi-duso" class="text-white no-underline hover:text-slate-200
+      <li class="p-2">
+        <a href="#casi-duso" class="text-white no-underline hover:text-slate-300
           ">Casi d'uso</a>
       </li>
-      <li>
-        <a href="#demo" class="text-white no-underline hover:text-slate-200
+      <li class="relative group p-2">
+        <a href="#home" class="text-white no-underline hover:text-slate-300 link-submenu
+          ">Sviluppo <i
+            class="float-right ml-4 pt-1 fas fa-caret-right group-hover:rotate-90 transition-all ease-linear duration-150 origin-center"></i>
+        </a>
+        <div
+          class="absolute top-full -right-6 -left-6 rounded-b-lg p-3 bg-black/40 max-md:hidden transition-all ease-linear duration-150 group-hover:scale-y-100 scale-y-0 origin-top">
+          <ul class="flex-col flex gap-5 p-2 m-2 font-bold justify-around w-full">
+            <li class="flex w-full">
+              <a href="#home" class="text-white no-underline hover:text-slate-300
+                  ">Training</a>
+            </li>
+            <li class="flex w-full">
+              <a href="#home" class="text-white no-underline hover:text-slate-300
+                  ">Back-end</a>
+            </li>
+            <li class="flex w-full">
+              <a href="#home" class="text-white no-underline hover:text-slate-300
+                  ">Front-end</a>
+            </li>
+          </ul>
+        </div>
+
+      </li>
+      <li class="p-2">
+        <a href="#demo" class="text-white no-underline hover:text-slate-300
           ">Demo</a>
       </li>
-      <li>
-        <a href="#team" class="text-white no-underline hover:text-slate-200
+      <li class="p-2">
+        <a href="#team" class="text-white no-underline hover:text-slate-300
           ">Team</a>
       </li>
     </ul>
@@ -48,13 +78,8 @@
   <main class="flex flex-col justify-center items-center w-full md:p-10 p-2">
 
     <a href="#home"
-      class="fixed z-10 no-underline hover:text-white bottom-10 right-10 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-full">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-        <path
-          d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
-        <path
-          d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
-      </svg>
+      class="fixed z-10 no-underline hover:text-white bottom-10 right-20 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-full">
+      <i class="fas fa-home p-1"></i>
     </a>
 
     <div id="presentazione" class="flex flex-col md:flex-row my-5 items-center bg-slate-100 rounded-xl shadow-lg">
@@ -65,35 +90,52 @@
 
         <section class="flex flex-col text-justify gap-6">
           <p>
-            <strong>MotionAI</strong> è un progetto che si pone l'obiettivo di creare un sistema di riconoscimento di
-            attività umane
-            tramite l'utilizzo di una <strong>SensorTile.Box PRO</strong>, un dispositivo sviluppato da <strong>ST
-              Microelectronics</strong>.
+            <strong>MotionAI</strong> è un progetto che si pone l'obiettivo di creare un sistema integrato per il
+            monitoraggio delle attività quotidiane. Utilizzando la <strong>SensorTile.box PRO</strong> di
+            <strong>STMicroelectronics</strong> per la raccolta dei dati e due modelli di <strong>Machine Learning
+              (ML)</strong>, uno eseguito sulla board e uno sullo smartphone. Il sistema raccoglie e analizza i dati in
+            tempo reale, offrendo una valutazione continua delle attività motorie.
           </p>
 
           <p>
-            La SensorTile.Box PRO è un dispositivo indossabile che integra diversi sensori, tra cui accelerometro,
-            giroscopio, magnetometro. Questi sensori permettono di raccogliere dati relativi all'attività
-            umana e all'ambiente circostante.
+            La SensorTile.box PRO è un dispositivo che integra diversi sensori, tra cui <strong>accelerometro</strong>,
+            <strong>giroscopio</strong> e <strong>magnetometro</strong>. Questi sensori permettono di raccogliere dati
+            relativi all'attività umana e all'ambiente circostante.
           </p>
 
           <p>
-            Il progetto sfrutta le potenzialità di questo dispositivo per riconoscere attività umane come camminare,
-            correre o guidare. Il sistema è stato sviluppato utilizzando un approccio di machine learning, in
-            particolare
-            rispettando i principi dell'Edge Computing, ovvero il processamento dei dati direttamente sul dispositivo.
-            Questo permette di ridurre i tempi di risposta e di aumentare la privacy dell'utente.
+            Il progetto sfrutta le potenzialità di questo dispositivo per riconoscere attività umane come
+            <strong>stazionarietà</strong>, <strong>camminata</strong>, <strong>corsa</strong> o <strong>guida</strong>.
+            Il sistema è stato sviluppato rispettando i principi dell'<strong>Edge Computing</strong>, ovvero il
+            processamento dei dati direttamente sul dispositivo.
+            Questo permette di ridurre i tempi di risposta e di rendere il riconoscimento indipendente da una
+            connessione ad Internet.
           </p>
 
-          <p>
-            Repository GitHub: <a
-              href="https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-MotionAI-Frontend-MigliettaDurante">
-              MotionAI Android app</a>
-          </p>
+          <div>
+            <strong>Repository GitHub:</strong>
+            <ul class="list-inside list-disc p-2">
+              <li>
+                <a
+                  href="https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-MotionAI-Machine_Learning-MigliettaDurante">
+                  MotionAI ML Model Training</a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-MotionAI-Backend-MigliettaDurante">
+                  MotionAI APIs</a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-MotionAI-Frontend-MigliettaDurante">
+                  MotionAI Android app</a>
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
       <div class="w-1/2 p-5 flex flex-col items-center justify-center gap-10">
-        <img src="./src/assets/sensortile.png" alt="SensorTile.Box PRO" />
+        <img src="./src/assets/sensortile.png" alt="SensorTile.box PRO" />
         <img src="./src/assets/st_logo.png" alt="ST Logo" class="w-28" />
       </div>
     </div>
@@ -104,41 +146,88 @@
           Funzionalità
         </h2>
 
-        <ul class="flex flex-col md:w-3/4 text-justify gap-6 list-disc list-inside">
+        <ul class="flex flex-col md:w-3/4 text-justify gap-6 list-disc list-outside p-5">
           <li>
-            <strong>Raccolta dati sensori:</strong>
-            Il sistema è in grado di raccogliere dati dai sensori presenti sulla SensorTile.Box PRO, tra cui
-            accelerometro, giroscopio e magnetometro. Questi dati vengono utilizzati per riconoscere le attività umane.
+            <strong>Acquisizione dati ed elaborazione:</strong>
+            La SensorTile.box PRO raccoglie i dati in tempo reale dall'accelerometro. I dati includono
+            informazioni sull'accelerazione nelle tre direzioni (X,Y,Z).
           </li>
           <li>
-            <strong>Visualizzazione dati:</strong>
-            Il sistema permette di visualizzare i dati raccolti dai sensori in tempo reale, in modo da monitorare
-            il corretto funzionamento del dispositivo.
+            <strong>Connessione Bluetooth Low Energy (BLE):</strong>
+            L'applicazione Android è in grado di stabilire una connessione Bluetooth con la board. Questo include:
+            <ul class="list-decimal list-outside px-5">
+              <li>Scansione dei dispositivi Bluetooth disponibili</li>
+              <li>Connessione alla SensorTile.box PRO</li>
+              <li>Disconnessione dalla SensorTile.box PRO</li>
+            </ul>
           </li>
           <li>
-            <strong>Riconoscimento attività:</strong>
-            Il sistema è in grado di riconoscere diverse attività umane, come camminare, correre o guidare.
+            <strong>Caricamento del modello pre-addrestrato sulla SensorTile.box PRO:</strong>
+            Il firmware con il modello di ML in grado di effettuare la classificazione sulle attività svolte viene caricato sulla board. Le attività da riconoscere sono: camminata, corsa, stazionarietà e guida.
           </li>
-
+          <li>
+            <strong>Caricamento del modello pre-addrestrato sullo smartphone:</strong>
+            Il sistema invia i dati dalla SensorTile.box PRO allo smartphone tramite Bluetooth e lo smartphone esegue un secondo modello di ML per confermare la classificazione effettuata dalla board.
+          </li>
+          <li>
+            <strong>Visualizzazione attività:</strong>
+            Le attività classificate vengono visualizzate sull'applicazione Android in tempo reale, mostrando il tipo di attività svolta.
+          </li>
+          <li>
+            <strong>Stima della durata delle attività:</strong>
+            Il sistema è in grado di calcolare la durata giornaliera di ogni tipo di attività svolta dall'utente. È, inoltre, possibile visualizzare una stima settimanale delle attività svolte, fornendo una panoramica dell'attività fisica nel corso del tempo.
+          </li>
+          <li>
+            <strong>Storico delle attività:</strong>
+            Il sistema consente di registrare uno storico delle attività classificate con la relativa durata, memorizzando i dati delle attività passate insieme alle relative date. L'utente deve poter accedere facilmente allo storico delle attività per analizzare i cambiamenti nel tempo.
+          </li>
+          <li>
+            <strong>Supporto in background:</strong>
+            L’applicazione Android continua a raccogliere, elaborare e inviare dati anche quando non è in primo piano, garantendo la continuità del monitoraggio delle attività e il risparmio energetico.
+          </li>
         </ul>
       </div>
-      <div class="carousel relative w-64 p-5 flex items-center justify-center overflow-hidden">
+      <div class="carousel relative p-5 bg-slate-300 rounded-xl shadow-inner shadow-slate-400 flex items-center justify-center overflow-hidden">
         <div class="carousel-inner w-64 flex transition-transform duration-500 ease-in-out">
-          <div class="carousel-item w-full px-2 flex-shrink-0">
-            <img src="./src/assets/Funzioni_disponibili.jpeg" alt="Funzioni disponibili"
+          <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+            <img src="./src/assets/schermate/Schermata_accesso.jpeg" alt="Login"
               class="w-full rounded-xl shadow-lg">
           </div>
-          <div class="carousel-item w-full px-2 flex-shrink-0">
-            <img src="./src/assets/Valori_accelerometro.jpeg" alt="Accelerometro" class="w-full rounded-xl shadow-lg">
+          <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+            <img src="./src/assets/schermate/Dashboard.jpeg" alt="Dashboard"
+              class="w-full rounded-xl shadow-lg">
           </div>
-          <div class="carousel-item w-full px-2 flex-shrink-0">
-            <img src="./src/assets/Schermata_HAR_stop.jpeg" alt="Activity Recognition" class="w-full rounded-xl shadow-lg">
+          <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+            <img src="./src/assets/schermate/Storico.jpeg" alt="Storico attività"
+              class="w-full rounded-xl shadow-lg">
+          </div>
+          <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+            <img src="./src/assets/schermate/Funzioni_disponibili.jpeg" alt="Funzioni"
+              class="w-full rounded-xl shadow-lg">
+          </div>
+          <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+            <img src="./src/assets/schermate/Valori_accelerometro.jpeg" alt="Accelerometro"
+              class="w-full rounded-xl shadow-lg">
+          </div>
+          <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+            <img src="./src/assets/schermate/Schermata_HAR_SensorTile.jpeg" alt="Recognition SensorTile.box PRO"
+              class="w-full rounded-xl shadow-lg">
+          </div>
+          <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+            <img src="./src/assets/schermate/Schermata_HAR_Smart-Sensor.jpeg" alt="Recognition Smartphone e SensorTile.box PRO"
+              class="w-full rounded-xl shadow-lg">
+          </div>
+          <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+            <img src="./src/assets/schermate/Schermata_HAR_Smartphone.jpeg" alt="Recognition Smartphone"
+              class="w-full rounded-xl shadow-lg">
           </div>
         </div>
-        <button
-          class="prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-l-3xl rounded-r-md">&larr;</button>
-        <button
-          class="next absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-r-3xl rounded-l-md">&rarr;</button>
+        <span
+          class="prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-l-3xl rounded-r-md"><i
+            class="fas fa-chevron-left"></i></span>
+        <span
+          class="next absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-r-3xl rounded-l-md"><i
+            class="fas fa-chevron-right"></i></span>
       </div>
     </div>
 
@@ -150,7 +239,7 @@
         <p class="w-full text-left my-5">
           L'architettura del sistema è raffigurata nel diagramma seguente:
         </p>
-        <img src="./src/assets/Architettura_sistema.png" alt="Architettura del sistema"
+        <img src="./src/assets/Architettura_sistema.jpeg" alt="Architettura del sistema"
           class="md:w-2/3 w-full rounded-xl shadow-lg" />
         <h3 class="text-left text-xl w-full font-bold py-2">
           Acquisition
@@ -223,7 +312,7 @@
           Il diagramma dei casi d'uso è raffigurato nella figura seguente:
         </p>
         <img src="./src/assets/diagramma dei casi d'uso.png" alt="Diagramma dei casi d'uso"
-          class="w-72 rounded-xl shadow-lg" />
+          class="rounded-xl shadow-lg" />
       </section>
 
       <div class="flex flex-col md:flex-row w-full mt-10">
@@ -252,30 +341,61 @@
           </p>
         </section>
 
-        <div class="carousel relative md:w-[40rem] p-5 flex items-center justify-center overflow-hidden">
+        <div class="carousel relative md:w-[40rem] bg-slate-300 rounded-xl shadow-inner shadow-slate-400 p-5 flex items-center justify-center overflow-hidden">
           <div class="carousel-inner md:w-[40rem] flex transition-transform duration-500 ease-in-out">
-            <div class="carousel-item w-full px-2 flex-shrink-0">
-              <img src="./src/assets/Diagramma_sequenza_collegamentoBluetooth.png" alt="Collegamento Bluetooth"
-                class="w-full rounded-xl shadow-lg">
-            </div>
-            <div class="carousel-item w-full px-2 flex-shrink-0">
-              <img src="./src/assets/Diagramma_sequenza_dati.png" alt="Visualizzazione dati"
+            <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+              <img src="./src\assets\sequence_diagrams\diagramma_sequenza_login.png" alt="Login"
                 class="w-full rounded-xl shadow-lg">
             </div>
             <div class="carousel-item content-center w-full px-2 flex-shrink-0">
-              <img src="./src/assets/Diagramma_sequenza_previsione.png" alt="Visualizzazione Activity Recognition"
+              <img src="./src\assets\sequence_diagrams\diagramma_sequenza_registrazione.png" alt="Registrazione"
+                class="w-full rounded-xl shadow-lg">
+            </div>
+            <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+              <img src="./src\assets\sequence_diagrams\diagramma_sequenza_modifica.png" alt="Modifica Utente"
+                class="w-full rounded-xl shadow-lg">
+            </div>
+            <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+              <img src=".\src\assets\sequence_diagrams\diagramma_sequenza_cancellazione.png" alt="Cancellazione Utente"
+                class="w-full rounded-xl shadow-lg">
+            </div>
+            <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+              <img src=".\src\assets\sequence_diagrams\Diagramma_sequenza_collegamentoBluetooth.png"
+                alt="Collegamento Bluetooth" class="w-full rounded-xl shadow-lg">
+            </div>
+            <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+              <img src=".\src\assets\sequence_diagrams\diagramma_di_sequenza_stima_e_durata.png"
+                alt="Stima attività e durata" class="w-full rounded-xl shadow-lg">
+            </div>
+            <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+              <img src=".\src\assets/sequence_diagrams/diagramma_sequenza_previsione_smartphone.png"
+                alt="Riconoscimento Smartphone" class="w-full rounded-xl shadow-lg">
+            </div>
+            <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+              <img src=".\src\assets\sequence_diagrams\Diagramma_sequenza_previsione.png"
+                alt="Riconoscimento SensorTile.box PRO" class="w-full rounded-xl shadow-lg">
+            </div>
+            <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+              <img src=".\src\assets\sequence_diagrams\Diagramma_sequenza_dati.png" alt="Visualizza dati"
+                class="w-full rounded-xl shadow-lg">
+            </div>
+            <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+              <img src=".\src\assets\sequence_diagrams\diagramma_sequenza_storico.png" alt="Storico Attività"
                 class="w-full rounded-xl shadow-lg">
             </div>
           </div>
-          <button
-            class="prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-l-3xl rounded-r-md">&larr;</button>
-          <button
-            class="next absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-r-3xl rounded-l-md">&rarr;</button>
+          <span
+            class="prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-l-3xl rounded-r-md"><i
+              class="fas fa-chevron-left"></i></span>
+          <span
+            class="next absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-r-3xl rounded-l-md"><i
+              class="fas fa-chevron-right"></i></span>
         </div>
       </div>
     </div>
 
-    <div id="demo" class="flex flex-col md:flex-row w-full my-5 items-center justify-center bg-slate-100 rounded-xl shadow-lg">
+    <div id="demo"
+      class="flex flex-col md:flex-row w-full my-5 items-center justify-center bg-slate-100 rounded-xl shadow-lg">
       <div class="p-2 m-5">
         <h2 class="text-2xl text-center mb-6 font-bold">
           Demo
