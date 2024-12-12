@@ -23,7 +23,8 @@
   </header>
 
   <nav class="z-20 flex flex-row justify-between sticky top-0 bg-black/50 max-lg:hidden">
-    <a href="#home" class="text-xl content-center mx-12 font-bold text-white group hover:text-slate-200 no-underline">Motion<span
+    <a href="#home"
+      class="text-xl content-center mx-12 font-bold text-white group hover:text-slate-200 no-underline">Motion<span
         class="text-sky-300 group-hover:text-sky-400">AI</span>
     </a>
     <ul class="flex gap-5 px-5 font-semibold justify-around">
@@ -163,43 +164,49 @@
           </li>
           <li>
             <strong>Caricamento del modello pre-addrestrato sulla SensorTile.box PRO:</strong>
-            Il firmware con il modello di ML in grado di effettuare la classificazione sulle attività svolte viene caricato sulla board. Le attività da riconoscere sono: camminata, corsa, stazionarietà e guida.
+            Il firmware con il modello di ML in grado di effettuare la classificazione sulle attività svolte viene
+            caricato sulla board. Le attività da riconoscere sono: camminata, corsa, stazionarietà e guida.
           </li>
           <li>
             <strong>Caricamento del modello pre-addrestrato sullo smartphone:</strong>
-            Il sistema invia i dati dalla SensorTile.box PRO allo smartphone tramite Bluetooth e lo smartphone esegue un secondo modello di ML per confermare la classificazione effettuata dalla board.
+            Il sistema invia i dati dalla SensorTile.box PRO allo smartphone tramite Bluetooth e lo smartphone esegue un
+            secondo modello di ML per confermare la classificazione effettuata dalla board.
           </li>
           <li>
             <strong>Visualizzazione attività:</strong>
-            Le attività classificate vengono visualizzate sull'applicazione Android in tempo reale, mostrando il tipo di attività svolta.
+            Le attività classificate vengono visualizzate sull'applicazione Android in tempo reale, mostrando il tipo di
+            attività svolta.
           </li>
           <li>
             <strong>Stima della durata delle attività:</strong>
-            Il sistema è in grado di calcolare la durata giornaliera di ogni tipo di attività svolta dall'utente. È, inoltre, possibile visualizzare una stima settimanale delle attività svolte, fornendo una panoramica dell'attività fisica nel corso del tempo.
+            Il sistema è in grado di calcolare la durata giornaliera di ogni tipo di attività svolta dall'utente. È,
+            inoltre, possibile visualizzare una stima settimanale delle attività svolte, fornendo una panoramica
+            dell'attività fisica nel corso del tempo.
           </li>
           <li>
             <strong>Storico delle attività:</strong>
-            Il sistema consente di registrare uno storico delle attività classificate con la relativa durata, memorizzando i dati delle attività passate insieme alle relative date. L'utente deve poter accedere facilmente allo storico delle attività per analizzare i cambiamenti nel tempo.
+            Il sistema consente di registrare uno storico delle attività classificate con la relativa durata,
+            memorizzando i dati delle attività passate insieme alle relative date. L'utente deve poter accedere
+            facilmente allo storico delle attività per analizzare i cambiamenti nel tempo.
           </li>
           <li>
             <strong>Supporto in background:</strong>
-            L’applicazione Android continua a raccogliere, elaborare e inviare dati anche quando non è in primo piano, garantendo la continuità del monitoraggio delle attività e il risparmio energetico.
+            L’applicazione Android continua a raccogliere, elaborare e inviare dati anche quando non è in primo piano,
+            garantendo la continuità del monitoraggio delle attività e il risparmio energetico.
           </li>
         </ul>
       </div>
-      <div class="carousel relative p-5 bg-slate-300 rounded-xl shadow-inner shadow-slate-400 flex items-center justify-center overflow-hidden">
+      <div
+        class="carousel relative p-5 m-5 bg-slate-300 rounded-xl shadow-inner shadow-slate-400 flex items-center justify-center overflow-hidden">
         <div class="carousel-inner w-64 flex transition-transform duration-500 ease-in-out">
           <div class="carousel-item content-center w-full px-2 flex-shrink-0">
-            <img src="./src/assets/schermate/Schermata_accesso.jpeg" alt="Login"
-              class="w-full rounded-xl shadow-lg">
+            <img src="./src/assets/schermate/Schermata_accesso.jpeg" alt="Login" class="w-full rounded-xl shadow-lg">
           </div>
           <div class="carousel-item content-center w-full px-2 flex-shrink-0">
-            <img src="./src/assets/schermate/Dashboard.jpeg" alt="Dashboard"
-              class="w-full rounded-xl shadow-lg">
+            <img src="./src/assets/schermate/Dashboard.jpeg" alt="Dashboard" class="w-full rounded-xl shadow-lg">
           </div>
           <div class="carousel-item content-center w-full px-2 flex-shrink-0">
-            <img src="./src/assets/schermate/Storico.jpeg" alt="Storico attività"
-              class="w-full rounded-xl shadow-lg">
+            <img src="./src/assets/schermate/Storico.jpeg" alt="Storico attività" class="w-full rounded-xl shadow-lg">
           </div>
           <div class="carousel-item content-center w-full px-2 flex-shrink-0">
             <img src="./src/assets/schermate/Funzioni_disponibili.jpeg" alt="Funzioni"
@@ -214,8 +221,8 @@
               class="w-full rounded-xl shadow-lg">
           </div>
           <div class="carousel-item content-center w-full px-2 flex-shrink-0">
-            <img src="./src/assets/schermate/Schermata_HAR_Smart-Sensor.jpeg" alt="Recognition Smartphone e SensorTile.box PRO"
-              class="w-full rounded-xl shadow-lg">
+            <img src="./src/assets/schermate/Schermata_HAR_Smart-Sensor.jpeg"
+              alt="Recognition Smartphone e SensorTile.box PRO" class="w-full rounded-xl shadow-lg">
           </div>
           <div class="carousel-item content-center w-full px-2 flex-shrink-0">
             <img src="./src/assets/schermate/Schermata_HAR_Smartphone.jpeg" alt="Recognition Smartphone"
@@ -232,73 +239,50 @@
     </div>
 
     <div id="architettura" class="flex flex-col my-5 p-5 items-center bg-slate-100 rounded-xl shadow-lg">
-      <h2 class="text-left text-2xl w-full font-bold">
+      <h2 class="text-left text-2xl w-full lg:w-2/3 font-bold">
         Architettura del sistema
       </h2>
       <section class="flex flex-col items-center w-full text-justify">
-        <p class="w-full text-left my-5">
+        <p class="w-full lg:w-2/3 text-left my-5">
           L'architettura del sistema è raffigurata nel diagramma seguente:
         </p>
         <img src="./src/assets/Architettura_sistema.jpeg" alt="Architettura del sistema"
-          class="md:w-2/3 w-full rounded-xl shadow-lg" />
-        <h3 class="text-left text-xl w-full font-bold py-2">
-          Acquisition
+          class="m-5 w-full lg:w-2/3 rounded-xl shadow-lg" />
+        <h3 class="text-left text-xl w-full lg:w-2/3 font-bold">
+          Descrizione
         </h3>
-        <p class="w-full text-left mb-4">
-          Il modulo di acquisizione è responsabile della raccolta dei dati dai sensori presenti sulla SensorTile.Box
-          PRO.
-          Questi dati vengono inviati al modulo di processing per l'elaborazione.
+        <p class="w-full lg:w-2/3 text-left my-2">
+          Il processo inizia con la raccolta dei dati provenienti dalla SensorTile.box PRO. I dati vengono acquisiti in
+          tempo reale tramite connessione Bluetooth, stabilita grazie all’ST Blue SDK integrato nell’app mobile
+          sviluppata in Kotlin. L’utente può visualizzare immediatamente i dati dei sensori o le attività identificate.
         </p>
-        <h3 class="text-left text-xl w-full font-bold py-2">
-          Processing
-        </h3>
-        <p class="w-full text-left mb-2">
-          Il modulo di processing è responsabile dell'elaborazione dei dati ricevuti dal modulo di acquisizione. In
-          particolare, il modulo di processing utilizza un modello di machine learning per riconoscere le attività umane
-          a partire dai dati raccolti.
+        <p class="w-full lg:w-2/3 text-left my-2">
+          I dati relativi all'utente e ai riconoscimenti, vengono inviati al backend, composto da due microservizi
+          principali:
+
+        <ul class="w-full lg:w-2/3 list-disc list-outside px-5 py-2">
+          <li>
+            <strong>AuthenticationService</strong>: gestisce la registrazione, la modifica dei dati dell'utente e
+            l’autenticazione tramite token JWT.
+          </li>
+          <li>
+            <strong>PredictionService</strong>: riceve i riconoscimenti dal modello di machine learning eseguito sullo
+            smartphone, salva i dati nel database MongoDB e fornisce funzionalità per analisi storiche e stime
+            settimanali.
+          </li>
+        </ul>
+        </p>
+        <p class="w-full lg:w-2/3 text-left my-2">
+          Sul lato ML, il sistema utilizza un modello Random Forest Classifier, addestrato offline su un dataset
+          pre-elaborato, utilizzando librerie Python come scikit-learn, pandas e NumPy. Il modello fornisce previsioni
+          sulle attività dell’utente, che vengono inviate al microservizio PredictionService per essere archiviate e
+          analizzate.
         </p>
 
-        <p class="w-full text-left mb-2">
-          Acquisizione dati e riconoscimento delle attività avvengono direttamente sulla SensorTile.Box PRO, rispettando
-          i principi dell'Edge Computing. È possibile visionare il codice sorgente del firmware <strong>BLEMLC</strong>
-          al seguente link:
-        </p>
-
-        <p class="w-full text-left mb-4">
-          Repository GitHub: <a
-            href="https://github.com/STMicroelectronics/fp-sns-stbox1/tree/main/Projects/STEVAL-MKBOXPRO/Applications/BLEMLC">BLEMLC</a>
-        </p>
-        <h3 class="text-left text-xl w-full font-bold py-2">
-          Communication
-        </h3>
-        <p class="w-full text-left mb-2">
-          Il modulo di communication è responsabile della comunicazione tra il modulo di processing e l'interfaccia
-          utente. In particolare, il modulo di communication invia i risultati del riconoscimento delle attività al
-          modulo di visualizzazione. La comunicazione avviene tramite protocollo <strong>BLE (Bluetooth Low
-            Energy)</strong>, in particolare
-          utilizzando l'SDK fornito da ST Microelectronics, <strong>Blue ST SDK</strong>.
-        </p>
-
-        <p class="w-full text-left mb-4">
-          Repository GitHub: <a href="https://github.com/STMicroelectronics/BlueSTSDK_Android">
-            BlueSTSDK_Android</a>
-        </p>
-
-        <h3 class="text-left text-xl w-full font-bold py-2">
-          Visualization
-        </h3>
-        <p class="w-full text-left mb-2">
-          Il modulo di visualization è responsabile della visualizzazione dei dati raccolti dai sensori e dei risultati
-          del riconoscimento delle attività. Il modulo di visualization permette all'utente di
-          monitorare il corretto funzionamento del sistema. In particolare, il modulo di visualization è stato
-          sviluppato
-          come un'applicazione Android, utilizzando il linguaggio <strong>Kotlin</strong>.
-        </p>
-
-        <p class="w-full text-left mb-4">
-          Repository GitHub: <a
-            href="https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-MotionAI-Frontend-MigliettaDurante">
-            MotionAI Android app</a>
+        <p class="w-full lg:w-2/3 text-left my-2">
+          L’utente può visualizzare le attività riconosciute e le stime di durata delle attività svolte, grazie
+          all’applicazione Android sviluppata in Kotlin. L’applicazione offre anche la possibilità di visualizzare uno
+          storico delle attività svolte e di accedere alle funzionalità di autenticazione.
         </p>
       </section>
     </div>
@@ -315,40 +299,88 @@
           class="rounded-xl shadow-lg" />
       </section>
 
-      <div class="flex flex-col md:flex-row w-full mt-10">
-        <section class="flex flex-col items-center md:w-3/5 text-justify md:mr-20">
+      <div class="flex flex-col lg:flex-row w-full items-center mt-10">
+        <section class="flex flex-col items-center lg:w-3/5 text-justify lg:mr-20 ml-10">
           <h3 class="text-left text-xl w-full font-bold py-2">
-            Collegamento Bluetooth
+            Registrazione Utente
           </h3>
           <p class="w-full text-left mb-4">
-            L'utente deve essere in grado di collegare la SensorTile.Box PRO al proprio smartphone tramite connessione
-            Bluetooth.
+            L'utente deve essere in grado di registrarsi all'applicazione inserendo i propri dati personali: nome,
+            cognome, data di nascita, email e password. Successivamente, può accedere all'applicazione inserendo le
+            proprie credenziali.
           </p>
           <h3 class="text-left text-xl w-full font-bold py-2">
-            Visualizzazione dati
+            Login Utente
           </h3>
           <p class="w-full text-left mb-2">
-            L'utente deve essere in grado di visualizzare i dati raccolti da accelerometro, giroscopio e magnetometro
-            presenti sulla SensorTile.Box PRO.
+            L'utente può accedere all'applicazione inserendo le proprie credenziali: email e password. Se le credenziali
+            sono corrette, l'utente viene reindirizzato alla dashboard e può visualizzare le attività riconosciute.
           </p>
-
           <h3 class="text-left text-xl w-full font-bold py-2">
-            Visualizzazione attività
+            Modifica Utente
           </h3>
           <p class="w-full text-left mb-2">
-            L'utente deve essere in grado di visualizzare le attività riconosciute dal sistema: camminare, correre o
-            guidare.
+            L'utente può modificare i propri dati personali, come nome, cognome, data di nascita, email e password.
+            Questa funzionalità è disponibile solo dopo aver effettuato l'accesso all'applicazione.
+          </p>
+          <h3 class="text-left text-xl w-full font-bold py-2">
+            Cancella Utente
+          </h3>
+          <p class="w-full text-left mb-2">
+            L'utente può cancellare il proprio account dall'applicazione. Questa funzionalità è disponibile solo dopo
+            aver effettuato l'accesso all'applicazione.
+          </p>
+          <h3 class="text-left text-xl w-full font-bold py-2">
+            Collegamento Bluetooth SensorTile.box PRO - Smartphone
+          </h3>
+          <p class="w-full text-left mb-2">
+            L'utente deve essere in grado di connettere la SensorTile.box PRO allo smartphone tramite Bluetooth. Questo
+            permette di inviare i dati raccolti dalla board allo smartphone per l'elaborazione.
+          </p>
+          <h3 class="text-left text-xl w-full font-bold py-2">
+            Visualizzazione Stima Attività e Durata giornaliera
+          </h3>
+          <p class="w-full text-left mb-2">
+            L'utente può visualizzare delle statistiche sull'attività giornaliera e una stima settimanale delle attività
+            svolte in confronto alla settimana precedente.
+          </p>
+          <h3 class="text-left text-xl w-full font-bold py-2">
+            Visualizzazione Riconoscimento Smartphone
+          </h3>
+          <p class="w-full text-left mb-2">
+            L'utente può visualizzare in tempo reale le attività riconosciute dal modello Random Forest eseguito sullo
+            smartphone. Questi riconoscimenti vengono poi inviati al backend per essere archiviati.
+          </p>
+          <h3 class="text-left text-xl w-full font-bold py-2">
+            Visualizzazione Riconoscimento SensorTile.box PRO
+          </h3>
+          <p class="w-full text-left mb-2">
+            L'utente può visualizzare in tempo reale le attività riconosciute dal modello Decision Tree eseguito sulla
+            SensorTile.box PRO.
+          </p>
+          <h3 class="text-left text-xl w-full font-bold py-2">
+            Visualizzazione Dati Sensori
+          </h3>
+          <p class="w-full text-left mb-2">
+            L'utente può visualizzare in tempo reale i dati misurati dai sensori accelerometro, giroscopio e magnetometro presenti nella SensorTile.box PRO.
+          </p>
+          <h3 class="text-left text-xl w-full font-bold py-2">
+            Visualizzazione Storico Attività
+          </h3>
+          <p class="w-full text-left mb-2">
+            L'utente può visualizzare uno storico delle attività svolte nelle giornate precedenti con la relativa durata.
           </p>
         </section>
 
-        <div class="carousel relative md:w-[40rem] bg-slate-300 rounded-xl shadow-inner shadow-slate-400 p-5 flex items-center justify-center overflow-hidden">
+        <div
+          class="carousel relative md:w-[40rem] h-min bg-slate-300 rounded-xl shadow-inner shadow-slate-400 p-5 m-5 flex items-center justify-center overflow-hidden">
           <div class="carousel-inner md:w-[40rem] flex transition-transform duration-500 ease-in-out">
             <div class="carousel-item content-center w-full px-2 flex-shrink-0">
-              <img src="./src\assets\sequence_diagrams\diagramma_sequenza_login.png" alt="Login"
+              <img src="./src\assets\sequence_diagrams\diagramma_sequenza_registrazione.png" alt="Registrazione"
                 class="w-full rounded-xl shadow-lg">
             </div>
             <div class="carousel-item content-center w-full px-2 flex-shrink-0">
-              <img src="./src\assets\sequence_diagrams\diagramma_sequenza_registrazione.png" alt="Registrazione"
+              <img src="./src\assets\sequence_diagrams\diagramma_sequenza_login.png" alt="Login"
                 class="w-full rounded-xl shadow-lg">
             </div>
             <div class="carousel-item content-center w-full px-2 flex-shrink-0">
