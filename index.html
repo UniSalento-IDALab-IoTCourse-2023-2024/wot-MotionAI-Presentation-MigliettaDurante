@@ -42,7 +42,7 @@
           ">Casi d'uso</a>
       </li>
       <li class="relative group p-2">
-        <a href="#home" class="text-white no-underline hover:text-slate-300 link-submenu
+        <a href="#sviluppo" class="text-white no-underline hover:text-slate-300 link-submenu
           ">Sviluppo <i
             class="float-right ml-4 pt-1 fas fa-caret-right group-hover:rotate-90 transition-all ease-linear duration-150 origin-center"></i>
         </a>
@@ -50,15 +50,15 @@
           class="absolute top-full -right-6 -left-6 rounded-b-lg p-3 bg-black/40 max-md:hidden transition-all ease-linear duration-150 group-hover:scale-y-100 scale-y-0 origin-top">
           <ul class="flex-col flex gap-5 p-2 m-2 font-bold justify-around w-full">
             <li class="flex w-full">
-              <a href="#home" class="text-white no-underline hover:text-slate-300
-                  ">Training</a>
-            </li>
-            <li class="flex w-full">
-              <a href="#home" class="text-white no-underline hover:text-slate-300
+              <a href="#backend" class="text-white no-underline hover:text-slate-300
                   ">Back-end</a>
             </li>
             <li class="flex w-full">
-              <a href="#home" class="text-white no-underline hover:text-slate-300
+              <a href="#training" class="text-white no-underline hover:text-slate-300
+                  ">Training</a>
+            </li>
+            <li class="flex w-full">
+              <a href="#frontend" class="text-white no-underline hover:text-slate-300
                   ">Front-end</a>
             </li>
           </ul>
@@ -228,6 +228,10 @@
             <img src="./src/assets/schermate/Schermata_HAR_Smartphone.jpeg" alt="Recognition Smartphone"
               class="w-full rounded-xl shadow-lg">
           </div>
+          <div class="carousel-item content-center w-full px-2 flex-shrink-0">
+            <img src="./src/assets/schermate/Notifica_persistente.jpeg" alt="Notifica persistente"
+              class="w-full rounded-xl shadow-lg">
+          </div>
         </div>
         <span
           class="prev absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-l-3xl rounded-r-md"><i
@@ -239,28 +243,28 @@
     </div>
 
     <div id="architettura" class="flex flex-col my-5 p-5 items-center bg-slate-100 rounded-xl shadow-lg">
-      <h2 class="text-left text-2xl w-full lg:w-2/3 font-bold">
+      <h2 class="text-left text-2xl w-full lg:w-1/2 font-bold mt-5">
         Architettura del sistema
       </h2>
-      <section class="flex flex-col items-center w-full text-justify">
-        <p class="w-full lg:w-2/3 text-left my-5">
+      <section class="flex flex-col items-center w-full text-justify mb-5">
+        <p class="w-full lg:w-1/2 text-left mt-5">
           L'architettura del sistema è raffigurata nel diagramma seguente:
         </p>
         <img src="./src/assets/Architettura_sistema.jpeg" alt="Architettura del sistema"
-          class="m-5 w-full lg:w-2/3 rounded-xl shadow-lg" />
-        <h3 class="text-left text-xl w-full lg:w-2/3 font-bold">
+          class="m-10 w-full lg:w-2/3 rounded-xl shadow-lg" />
+        <h3 class="text-left text-xl w-full lg:w-1/2 font-bold mt-5">
           Descrizione
         </h3>
-        <p class="w-full lg:w-2/3 text-left my-2">
+        <p class="w-full lg:w-1/2 text-left my-2">
           Il processo inizia con la raccolta dei dati provenienti dalla SensorTile.box PRO. I dati vengono acquisiti in
           tempo reale tramite connessione Bluetooth, stabilita grazie all’ST Blue SDK integrato nell’app mobile
           sviluppata in Kotlin. L’utente può visualizzare immediatamente i dati dei sensori o le attività identificate.
         </p>
-        <p class="w-full lg:w-2/3 text-left my-2">
+        <p class="w-full lg:w-1/2 text-left my-2">
           I dati relativi all'utente e ai riconoscimenti, vengono inviati al backend, composto da due microservizi
           principali:
 
-        <ul class="w-full lg:w-2/3 list-disc list-outside px-5 py-2">
+        <ul class="w-full lg:w-1/2 list-disc list-outside px-5 py-2">
           <li>
             <strong>AuthenticationService</strong>: gestisce la registrazione, la modifica dei dati dell'utente e
             l’autenticazione tramite token JWT.
@@ -272,14 +276,14 @@
           </li>
         </ul>
         </p>
-        <p class="w-full lg:w-2/3 text-left my-2">
+        <p class="w-full lg:w-1/2 text-left my-2">
           Sul lato ML, il sistema utilizza un modello Random Forest Classifier, addestrato offline su un dataset
           pre-elaborato, utilizzando librerie Python come scikit-learn, pandas e NumPy. Il modello fornisce previsioni
           sulle attività dell’utente, che vengono inviate al microservizio PredictionService per essere archiviate e
           analizzate.
         </p>
 
-        <p class="w-full lg:w-2/3 text-left my-2">
+        <p class="w-full lg:w-1/2 text-left my-2">
           L’utente può visualizzare le attività riconosciute e le stime di durata delle attività svolte, grazie
           all’applicazione Android sviluppata in Kotlin. L’applicazione offre anche la possibilità di visualizzare uno
           storico delle attività svolte e di accedere alle funzionalità di autenticazione.
@@ -362,13 +366,15 @@
             Visualizzazione Dati Sensori
           </h3>
           <p class="w-full text-left mb-2">
-            L'utente può visualizzare in tempo reale i dati misurati dai sensori accelerometro, giroscopio e magnetometro presenti nella SensorTile.box PRO.
+            L'utente può visualizzare in tempo reale i dati misurati dai sensori accelerometro, giroscopio e
+            magnetometro presenti nella SensorTile.box PRO.
           </p>
           <h3 class="text-left text-xl w-full font-bold py-2">
             Visualizzazione Storico Attività
           </h3>
           <p class="w-full text-left mb-2">
-            L'utente può visualizzare uno storico delle attività svolte nelle giornate precedenti con la relativa durata.
+            L'utente può visualizzare uno storico delle attività svolte nelle giornate precedenti con la relativa
+            durata.
           </p>
         </section>
 
@@ -423,6 +429,242 @@
             class="next absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800/60 hover:bg-gray-800/40 text-white p-2 rounded-r-3xl rounded-l-md"><i
               class="fas fa-chevron-right"></i></span>
         </div>
+      </div>
+    </div>
+
+    <div id="sviluppo" class="flex flex-col w-full my-5 p-5 items-center bg-slate-100 rounded-xl shadow-lg">
+      <h2 class="text-2xl text-left lg:w-1/2 w-full font-bold">
+        Sviluppo
+      </h2>
+      <section class="flex flex-col items-center w-full text-justify my-5">
+        <p class="w-full lg:w-1/2 text-left my-5">
+          Il progetto è stato sviluppato utilizzando diverse tecnologie e linguaggi di programmazione. Di seguito sono
+          elencati i principali strumenti utilizzati per lo sviluppo del sistema:
+        </p>
+        <ul class="w-full lg:w-1/2 list-disc list-outside px-5 py-2 flex flex-col gap-2">
+          <li>
+            <strong>ST Blue SDK:</strong> SDK fornito da STMicroelectronics per lo sviluppo di applicazioni Android
+            che interagiscono con i dispositivi Bluetooth della famiglia SensorTile.box.
+          </li>
+          <li>
+            <strong>Kotlin:</strong> linguaggio di programmazione utilizzato per lo sviluppo dell'applicazione Android.
+          </li>
+          <li>
+            <strong>Python:</strong> linguaggio di programmazione utilizzato per l'addestramento del modello di machine
+            learning.
+          </li>
+          <li>
+            <strong>scikit-learn:</strong> libreria Python per l'apprendimento automatico.
+          </li>
+          <li>
+            <strong>pandas:</strong> libreria Python per la manipolazione e l'analisi dei dati.
+          </li>
+          <li>
+            <strong>NumPy:</strong> libreria Python per il calcolo scientifico.
+          </li>
+          <li>
+            <strong>Java:</strong> utilizzato per lo sviluppo del backend.
+          </li>
+          <li>
+            <strong>Spring Boot:</strong> framework Java per la creazione di API RESTful.
+          </li>
+          <li>
+            <strong>MongoDB:</strong> database NoSQL utilizzato per la memorizzazione dei dati.
+          </li>
+        </ul>
+      </section>
+      <div class="flex flex-col lg:flex-row w-full items-center mt-10">
+        <section>
+          <h3 id="backend" class="w-full text-left text-2xl font-bold py-2 mt-5">
+            Back-end
+          </h3>
+          <p class="w-full text-left my-5">
+            Il backend è stato sviluppato utilizzando il framework Spring Boot. Successivamente, i due microservizi
+            sviluppati sono stati containerizzati con Docker su delle istanze AWS EC2. Le API RESTful sono accessibili
+            tramite AWS API Gateway. Di seguito sono elencate le principali funzionalità offerte dai microservizi:
+          </p>
+          <h4 class="w-full text-left text-lg font-bold pt-2">
+            Authentication Service - API RESTful
+          </h4>
+          <ul class="w-full list-disc list-outside p-3 flex flex-col gap-2">
+            <li>
+              <strong>POST api/v1/registration:</strong> Questa API consente la creazione di un nuovo account nel
+              sistema.
+            </li>
+            <li>
+              <strong>POST /api/v1/login:</strong> Questa API consente di effettuare l'accesso al sistema.
+            </li>
+            <li>
+              <strong>PUT /api/v1/user/put:</strong> Questa API permette di modificare le informazioni dell'utente.
+            </li>
+            <li>
+              <strong>DELETE /api/v1/user/delete:</strong> Questa API permette di cancellare un utente dal sistema.
+            </li>
+            <li>
+              <strong>GET /api/v1/user/get:</strong> Questa API restituisce le informazioni dell'utente autenticato.
+            </li>
+          </ul>
+          <h4 class="w-full text-left pt-4 text-lg font-bold">
+            Prediction Service - API RESTful
+          </h4>
+          <ul class="w-full list-disc list-outside p-3 flex flex-col gap-2">
+            <li>
+              <strong>POST /api/v1/prediction/insert:</strong> Questa API consente di inserire all'interno del database
+              l'attività riconosciuta con la relativa durata.
+            </li>
+            <li>
+              <strong>GET /api/v1/prediction/getByEmail:</strong> Questa API restituisce tutte le predizioni che sono
+              state inserite per uno spedcifico utente.
+            </li>
+            <li>
+              <strong>GET /api/v1/prediction/estimate:</strong> Questa API fornisce una stima in percentuale di quanto
+              l'utente ha svolto una certa attività (in più o in meno) rispetto alla settimana precedente.
+            </li>
+            <li>
+              <strong>GET /api/v1/prediction/activityDuration:</strong> Questa API fornisce la durata giornaliera per
+              ogni tipo di attività che viene svolta dall'utente. La durata è espressa in secondi.
+            </li>
+            <li>
+              <strong>GET /api/v1/prediction/getAllByUser:</strong> Questa API fornisce tutte le durate delle attività
+              svolte registrate nel corso di diverse giornate.
+            </li>
+            <li>
+              <strong>DELETE /api/v1/prediction/delete:</strong> Questa API permette di cancellare tutte le attività
+              riconosciute associate ad uno specifico utente.
+            </li>
+          </ul>
+        </section>
+        <img src="src\assets\api_gateway.png" alt="API Gateway" class="m-20 w-96 rounded-xl shadow-lg" />
+      </div>
+      <div class="flex flex-col lg:flex-row w-full items-center mt-10">
+        <section class="w-full lg:w-1/2">
+          <h3 id="training" class="w-full text-left text-2xl font-bold py-2 mt-5">
+            Training
+          </h3>
+          <p class="w-full text-left my-5">
+            Il modello di machine learning è stato addestrato utilizzando un dataset pre-elaborato, il quale è stato Successivamente suddiviso in due parti: 80% di osservazioni per l'addestramento e il 20% per il test. Il modello è stato addestrato utilizzando la libreria scikit-learn di Python.
+          </p>
+          <h4 class="w-full text-left text-lg font-bold pt-2">
+            Dataset
+          </h4>
+          <p class="w-full text-left my-5">
+            Il dataset è stato ottenuto raggruppando i dati raccolti in finestre temporali di circa 2 secondi (60 campioni considerando la frequenza di campionamento di 30 Hz) Questo approccio permette di ottenere un'analisi accurata dei dati e di estrarre le informazioni necessarie per il riconoscimento delle attività. In particolare, le coordinate spaziali per le classi <strong>Running</strong>, <strong>Walking</strong> e <strong>Stationary</strong> sono state raccolte da STMicroelectronics e sono accessibili alla seguente repository: <a href="https://github.com/STMicroelectronics/stm32ai-wiki/tree/master/AI_resources/HAR/dataset">STMicroelectronics HAR Dataset</a>, mentre i dati relativi alla classe <strong>Driving</strong> sono stati raccolti appositamente per il progetto.
+          </p>
+          <p class="w-full text-left my-5">
+            Il modello <strong>Random Forest</strong> è stato addestrato e testato utilizzando un dataset composto da 2.590 istanze e 12 features:
+          </p>
+          <ul class="w-full list-disc list-outside px-3 flex flex-col gap-2">
+            <li>
+              <strong>Media X:</strong> Media dei valori sull'asse X.
+            </li>
+            <li>
+              <strong>Media Y:</strong> Media dei valori sull'asse Y.
+            </li>
+            <li>
+              <strong>Media Z:</strong> Media dei valori sull'asse Z.
+            </li>
+            <li>
+              <strong>Varianza X:</strong> Varianza dei valori sull'asse X.
+            </li>
+            <li>
+              <strong>Varianza Y:</strong> Varianza dei valori sull'asse Y.
+            </li>
+            <li>
+              <strong>Varianza Z:</strong> Varianza dei valori sull'asse Z.
+            </li>
+            <li>
+              <strong>Peak to Peak X:</strong> Differenza tra il valore massimo e minimo sull'asse X.
+            </li>
+            <li>
+              <strong>Peak to Peak Y:</strong> Differenza tra il valore massimo e minimo sull'asse Y.
+            </li>
+            <li>
+              <strong>Peak to Peak Z:</strong> Differenza tra il valore massimo e minimo sull'asse Z.
+            </li>
+            <li>
+              <strong>Zero Crossings X:</strong> Numero di attraversamenti dello zero sull'asse X.
+            </li>
+            <li>
+              <strong>Zero Crossings Y:</strong> Numero di attraversamenti dello zero sull'asse Y.
+            </li>
+            <li>
+              <strong>Zero Crossings Z:</strong> Numero di attraversamenti dello zero sull'asse Z.
+            </li>
+          </ul>
+          <h4 class="w-full text-left pt-4 text-lg font-bold">
+            Classification Report
+          </h4>
+          <p class="w-full text-left my-5">
+            Durante la fase di addestramento del modello, sono state valutate le prestazioni del modello di riconoscimento. In particolare, sono stati analizzati i seguenti aspetti:
+          </p>
+          <ul class="w-full list-disc list-outside p-3 flex flex-col gap-2">
+            <li>
+              <strong>Accuracy:</strong> Percentuale di riconoscimenti corretti sul totale delle istanze. Indica la performance complessiva del modello.
+            </li>
+            <li>
+              <strong>Precision:</strong> Percentuale di riconoscimenti corretti tra tutti quelli effettuati per una classe specifica. Misura quanto il modello sia affidabile quando classifica un'istanza in una determinata classe. Permette di valutare la capacità del modello di non etichettare erroneamente un'istanza come appartenente a una classe diversa.
+            </li>
+            <li>
+              <strong>Recall:</strong> Percentuale di riconoscimenti corretti tra tutte le istanze effettive di una classe. Misura la capacità del modello di identificare tutte le istanze di una classe. Permette di valutare la capacità del modello di non etichettare erroneamente un'istanza come appartenente a una classe diversa.
+            </li>
+            <li>
+              <strong>F1-Score:</strong> Media armonica tra Precision e Recall. Un buon bilanciamento tra queste due metriche indica una performance stabile.
+            </li>
+            <li>
+              <strong>Support:</strong> Rappresenta il numero totale di istanze effettive (vere) presenti in ciascuna classe nel dataset di test.
+            </li>
+          </ul>
+          <p class="w-full text-left my-5">
+            Dalla tabella si può notare che il modello Random Forest dimostra un'ottima capacità di riconoscere le diverse attività, con valori di precision, recall e F1-score molto vicini al 100\% per tutte le classi. La classe "Stationary" mostra una leggera diminuzione nel fattore di Recall, mentre "Walking" ha una leggera diminuzione di precision. Tuttavia, queste differenze non influiscono molto sulla qualità generale del modello.
+          </p>
+          <h4 class="w-full text-left pt-4 text-lg font-bold">
+            Confusion Matrix
+          </h4>
+          <p class="w-full text-left my-5">
+            Dalla matrice si osserva che il modello Random Forest si comporta in maniera eccellente, con la maggior parte delle classificazioni corrette collocate lungo la diagonale principale. In particolare:
+          </p>
+          <ul class="w-full list-disc list-outside p-3 flex flex-col gap-2">
+            <li>
+              La classe <strong>Driving</strong> è classificata quasi perfettamente, con solo un'istanza riconosciuta erroneamente come "Walking".
+            </li>
+            <li>
+              La classe <strong>Running</strong> mostra prestazioni impeccabili, con una classificazione corretta al 100%.
+            </li>
+            <li>
+              La classe <strong>Stationary</strong> ha un'alta accuratezza, sebbene si notino alcuni errori: un'istanza è stata identificata come "Driving" e quattro come "Walking".
+            </li>
+            <li>
+              La classe <strong>Walking</strong> ha lievi problemi di classificazione, con alcune istanze confuse con la classe "Stationary", ma mantiene comunque un elevato livello di precision e recall.
+            </li>
+          </ul>
+          <h4 class="w-full text-left pt-4 text-lg font-bold">
+            Cross Validation
+          </h4>
+          <p class="w-full text-left my-5">
+            Per valutare le prestazioni del modello Random Forest, è stata utilizzata la tecnica di <strong>Cross Validation</strong>. Questa tecnica permette di suddividere il dataset in k parti, addestrare il modello su k-1 parti e testarlo sulla parte rimanente. Questo processo viene ripetuto k volte, in modo che ogni parte del dataset venga utilizzata almeno una volta come set di test. Questa tecnica permette di ottenere una stima più accurata delle prestazioni del modello, riducendo il rischio di overfitting e fornendo una valutazione più affidabile della sua capacità di generalizzazione.
+          </p>
+          <p class="w-full text-left my-5">
+            In particolare è stata utilizzata la tecnica <strong>Leave One Out Cross Validation (LOOCV)</strong>, in cui il dataset viene suddiviso in k parti, con k uguale al numero di istanze presenti nel dataset. Questa tecnica è particolarmente utile quando si dispone di un numero limitato di istanze, poiché permette di utilizzare al meglio i dati disponibili per l'addestramento e la validazione del modello.
+          </p>
+          <p class="w-full text-left my-5">
+            Si osserva che, con la tecnica LOOCV, il modello Random Forest ha ottenuto un'accuracy del 97.45% con una varianza pari circa a 0.0248, confermando l'efficacia del modello nel riconoscere le diverse attività. Questi risultati confermano la validità del modello Random Forest e la sua capacità di generalizzare correttamente le attività riconosciute.
+          </p>
+        </section>
+        <div class="w-full lg:w-1/2 p-2 flex flex-col items-center justify-center gap-10">
+          <img src="./src/assets/classification_report.png" alt="Classification Report" class="w-2/3 rounded-xl shadow-lg" />
+          <img src="./src/assets/confusion matrix.png" alt="Matrice di Confusione" class="w-2/3 rounded-xl shadow-lg" />
+          <img src="./src/assets/LooCrossValidation.png" alt="Cross Validation" class="w-2/3 rounded-md shadow-lg" />
+        </div>
+      </div>
+      <div class="flex flex-col w-full lg:w-1/2 items-center mt-10">
+          <h3 id="frontend" class="w-full text-left text-2xl font-bold py-2 mt-5">
+            Front-end
+          </h3>
+          <p class="w-full text-left my-5">
+            L'applicazione Android è stata sviluppata utilizzando il linguaggio di programmazione <strong>Kotlin</strong>. L'applicazione offre diverse funzionalità per l'utente, tra cui la registrazione, l'accesso, la modifica e la cancellazione dell'account. Inoltre, l'utente può connettersi alla SensorTile.box PRO tramite <strong>Bluetooth</strong> per visualizzare le attività riconosciute, la stima della durata delle attività svolte e uno storico delle attività svolte nelle giornate precedenti. Infine, può visualizzare i dati dei sensori accelerometro, giroscopio e magnetometro presenti nella SensorTile.box PRO.
+          </p>
+          <p class="w-full text-left my-5"> In particolare, tutte le interazioni con la SensorTile.box PRO sono state possibili grazie all'SDK <strong>ST Blue SDK</strong> di STMicroelectronics che ha permesso la piena compatibilità tra la board e l'applicazione Android. Questo SDK fornisce le funzionalità necessarie per la connessione Bluetooth e la ricezione dei dati dai sensori.
+          </p>
       </div>
     </div>
 
